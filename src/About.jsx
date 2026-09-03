@@ -17,12 +17,17 @@ function About(){
 
                         <div className="btn-group">
                             <div className="btn">Download Resume</div>
-                            <div className="btn">Contact</div>
+                            <a href="#contact" className="btn">Contact</a>
                         </div>
 
                         <div className="socials">
-                            <i className="fa-brands fa-square-github"></i>
-                            <i className="fa-brands fa-square-linkedin"></i>
+                            <a href="https://github.com/EJV22" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-square-github"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/eiron-vite/" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-square-linkedin"></i>
+                            </a>
                         </div>
 
                     </div>
