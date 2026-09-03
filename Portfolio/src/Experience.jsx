@@ -43,8 +43,6 @@ function Experience(){
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores est voluptates exercitationem!</p>
                     </div>
                 </div>
-
-                <img src={Headshot1} alt="Me" />
             </div>
         </section>
     );

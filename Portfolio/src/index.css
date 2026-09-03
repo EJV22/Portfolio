@@ -126,6 +126,7 @@ section{
 
 .about img{
   width: 35vw;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -208,14 +209,9 @@ section{
   gap: 5rem;
 }
 
-.experience img{
-  width: 24vw;
-  border-radius: 3rem;
-}
-
 .grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   gap: 2rem;
 }
 .grid-card{
