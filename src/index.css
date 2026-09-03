@@ -209,7 +209,7 @@ section{
 
 .section-title{
   text-align: center;
-  font-size: (3.5rem, 4rem, 20vh);
+  font-size: clamp(3.5rem, 4rem, 20vh);
   font-weight: 600;
   margin-bottom: 3rem;
 }
@@ -364,11 +364,6 @@ footer ul{
 footer ul li a{
   color: var(--header-text);
   font-weight: 600;
-}
-
-.copyright{
-  font-size: 300;
-  margin-top: 2rem;
 }
 
 
