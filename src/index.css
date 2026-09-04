@@ -85,10 +85,10 @@ li a:hover::before {
   border: none;
   font-weight: 500;
   font-size: 1rem;
-  color: var(--header-background);
   cursor: pointer;
   text-wrap: nowrap;
   transition: 0.3 ease-in-out;
+  color: var(--header-background);
   background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
 }
 
@@ -282,12 +282,12 @@ section{
   border: 2px solid black;
   border-radius: 3rem;
   cursor: pointer;
-  transition: 0.3 ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .project-card:hover{
   background-color: var(--background-color);
   color: var(--text-color);
-  transform: translateY(-10px)scale(1.02);
+  transform: scale(1.02);
 }
 .project-card img{
   width: 20vw;
@@ -309,38 +309,46 @@ section{
 
 /*______________CONTACT & FOOTER___________*/
 
-.input-box {
+.contact-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2rem;
   margin-top: 5rem;
+  gap: 2rem;
 }
 
-.input-box input{
-  position: relative;
-  border-radius: 3rem;
+.contact-box .box {
+
+  padding: 1rem;
   border: 2px solid black;
-  padding: 2rem 8rem;
-  font-size: 3rem;
+  border-radius: 3rem;
+  transition: 0.4s ease-in-out;
 }
 
-.input-box input::placeholder{
-  font-size: 3rem;
+.contact-box .box:hover{
+  transform: scale(1.03);
+  background-color: var(--background-color);
+  cursor: pointer;
+  border-radius: 1rem;
+
+  > a, i, span {
+    color: var(--text-color);
+  }
+
+  .copy-tooltip {
+    display: block;
+  }
 }
 
-.input{
-  position: relative;
+.contact-box .box a {
+
+  color: var(--background-color);
 }
 
-.input i{
-  position: absolute;
-  font-size: 4rem;
-  top: 50%;
-  left: 10px;
-  transform: translate(50%, -50%);
+.contact-box .box .copy-tooltip {
+  display: none;
 }
 
 footer{
@@ -425,6 +433,7 @@ footer ul li a{
 @media(max-width: 625px) {
   header #menu-icon{
     display: block;
+    cursor: pointer;
   }
   .nav-links{
     position: absolute;

@@ -12,39 +12,43 @@ function Experience(){
 
                 <div className="grid">
                     <div className="grid-card">
-                        <i class="fa-solid fa-code"></i>
+
+                        <div className="icons">
+                            <i class="fa-brands fa-html5"/> <i class="fa-brands fa-css3-alt"/>
+                        </div>
 
                         <span>Frontend Development</span>
-                        <h3>1 years</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores est voluptates exercitationem!</p>
+                        <h3>1 year</h3>
+                        <p>Self-studied CSS/HTML/JS fundamentals and implemented a React + Vite framework for this website! Familiar with responsiveness, web scalability, and deployment.</p>
                     </div>
 
                     <div className="grid-card">
                         <i class="fa-solid fa-file-code"></i>
 
-                        <span>Frontend Development</span>
-                        <h3>1 years</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores est voluptates exercitationem!</p>
+                        <span>Community Involvement</span>
+                        <h3>3+ years</h3>
+                        <p>Directed and volunteered for multiple clubs and initiatives. Currently an Events Associate for TMU BYTE and a Course Tutoring Coordinator for USSTM!</p>
                     </div>
 
                     <div className="grid-card">
                         <i class="fa-solid fa-laptop"></i>
 
-                        <span>Frontend Development</span>
-                        <h3>1 years</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores est voluptates exercitationem!</p>
+                        <span>Service</span>
+                        <h3>3+ years</h3>
+                        <p>Formerly worked for Canada's Largest running dance business, Studio North. Different customer service jobs in retail and fast food!</p>
                     </div>
 
                     <div className="grid-card">
                         <i class="fa-solid fa-list"></i>
 
-                        <span>Frontend Development</span>
-                        <h3>1 years</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores est voluptates exercitationem!</p>
+                        <span>Fundamentals</span>
+                        <h3>1+ years</h3>
+                        <p>Worked with Object Oriented Programming, data structures, algorithms, and scalability throughout the summer.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     );
 }
 

@@ -13,7 +13,7 @@ function Footer(){
                     <a href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#projects">Projects</a>
                 </li>
             </ul>
         </footer>

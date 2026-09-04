@@ -36,7 +36,11 @@ function Header(){
                 
             <i className="fa-solid fa-bars" id="menu-icon" onClick={toggleClick}></i>
 
-            <button className="visit-btn" >Visit Github</button>
+            <a href="https://github.com/EJV22" target="_blank" rel="noopener noreferrer">
+                <button className="visit-btn" >
+                    Visit Github
+                </button>
+            </a>
         </header>
     );
 }
