@@ -43,7 +43,7 @@ function Experience(){
 
                         <span>Fundamentals</span>
                         <h3>1+ years</h3>
-                        <p>Worked with Object Oriented Programming, data structures, algorithms, and scalability throughout the summer.</p>
+                        <p>Familiar with Object Oriented Programming, data structures, algorithms, and project scalability.</p>
                     </div>
                 </div>
             </div>

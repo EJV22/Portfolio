@@ -1,9 +1,19 @@
+import React, {useState} from "react";
+
 
 function Contact(){
 
-    const copyNumber = () => {
+    const [copied, setCopied] = useState(false);
 
-        navigator.clipboard.writeText("437-985-7856");
+    const copyNumber = async () => {
+
+        await navigator.clipboard.writeText("437-985-7856");
+        setCopied (true);
+
+        setTimeout(() => {
+
+            setCopied(false);
+        }, 2000);
     };
 
     return(
@@ -12,33 +22,33 @@ function Contact(){
 
                 <h2 className="section-title">Contact Me</h2>
 
-                <div className="box">
+                <a href="mailto:viteeiron@gmail.com">
+                    <div className="box">
 
-                    <a href="mailto:viteeiron@gmail.com">
                         <i class="fa-solid fa-envelope"/>
                         <span>viteeiron@gmail.com </span>
                         <span className="copy-tooltip">Click to email</span>
-                    </a>
+            
+                    </div>
+                </a>
 
-                </div>
-
-                <div className="box">
-                    <a href="mailto:eiron.j.vite@torontomu.ca">
+                <a href="mailto:eiron.j.vite@torontomu.ca">
+                    <div className="box">
                         <i class="fa-solid fa-book"/>
                         <span>eiron.j.vite@torontomu.ca</span>
                         <span className="copy-tooltip">Click to email</span>
-                    </a>
+                    </div>
+                </a>
 
-                </div>
 
-                <div className="box">
-                    <a onClick={copyNumber}>
+                <a onClick={copyNumber}>
+                    <div className="box">
                         <i class="fa-solid fa-phone"/>
                         <span>+1(437)-985-7856</span>
-                        <span className="copy-tooltip">Click to copy</span>
-                    </a>
+                        <span className="copy-tooltip"> {copied ? `Successfully copied!` : `Click to copy`}</span>
 
-                </div>
+                    </div>  
+                </a>
 
             </div>
         </section>

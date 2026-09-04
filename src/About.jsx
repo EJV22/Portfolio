@@ -1,4 +1,5 @@
 import Headshot1 from "./assets/Headshot1.jpeg"
+import EironViteResume from "./assets/EironVite.Resume.pdf"
 
 function About(){
 
@@ -16,7 +17,8 @@ function About(){
                         </div>
 
                         <div className="btn-group">
-                            <div className="btn">Download Resume</div>
+                            <a href={EironViteResume} download className="btn">Download Resume</a>
+                            
                             <a href="#contact" className="btn">Contact</a>
                         </div>
 

@@ -325,6 +325,10 @@ section{
   border: 2px solid black;
   border-radius: 3rem;
   transition: 0.4s ease-in-out;
+
+  > i, span {
+    color: var(--background-color);
+  }
 }
 
 .contact-box .box:hover{
@@ -333,7 +337,7 @@ section{
   cursor: pointer;
   border-radius: 1rem;
 
-  > a, i, span {
+  > i, span {
     color: var(--text-color);
   }
 
