@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 
-
 function Contact(){
 
     const [copied, setCopied] = useState(false);
@@ -17,27 +16,28 @@ function Contact(){
     };
 
     useEffect(() => {
-        
+
         const observer = new IntersectionObserver((entries) => {
 
             entries.forEach((entry) => {
-
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
-                }else{
+                } else{
                     entry.target.classList.remove("show");
                 }
+
             });
+        }, {
+            threshold: 0.4
         });
 
-        const contactElements = document.querySelectorAll(".box");
+        const boxes = document.querySelectorAll(".box");
 
-        contactElements.forEach ((el) => observer.observe(el));
-
-        return () => {
-            observer.disconnect();
-        };
+        boxes.forEach((box) => {
+            observer.observe(box);
+        });
     }, []);
+
 
     return(
         <section className="contact" id="contact">
@@ -68,7 +68,7 @@ function Contact(){
                     <div className="box">
                         <i class="fa-solid fa-phone"/>
                         <span>+1(437)-985-7856</span>
-                        <span className="copy-tooltip"> {copied ? `Successfully copied!` : `Click to copy`}</span>
+                        <span className="copy-tooltip"> {copied ? 'Successfully copied!' : 'Click to copy'}</span>
 
                     </div>  
                 </a>

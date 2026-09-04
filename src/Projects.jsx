@@ -19,7 +19,7 @@ function Project(){
                    <div className="btn-group">
                         <a href="https://github.com/EJV22/Storage-Cleaner" target="_blank" rel="noopener noreferrer">
                             <div className="btn">
-                                Repo
+                                Repository
                             </div>
                         </a>
                     </div>
@@ -34,7 +34,7 @@ function Project(){
                    <div className="btn-group">
                         <a href="https://github.com/EJV22/Habit-Tracker" target="_blank" rel="noopener noreferrer">
                             <div className="btn">
-                                Repo
+                                Repository
                             </div>
                         </a>
                     </div>
@@ -50,7 +50,7 @@ function Project(){
                         
                         <a href="https://github.com/EJV22/PizzaGUI" target="_blank" rel="noopener noreferrer">
                             <div className="btn">
-                                Repo
+                                Repository
                             </div>
                         </a>
                     </div>

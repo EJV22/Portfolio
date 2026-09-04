@@ -16,7 +16,7 @@ function Header(){
                 <span>Eiron Vite</span>
             </a>
 
-            <ul className={`nav-links ${isClicked ? `active` : ''}`}>
+            <ul className={`nav-links ${isClicked ? 'active' : ''}`}>
                 <li>
                     <a href="#about">About</a>
                 </li>

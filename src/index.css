@@ -317,18 +317,18 @@ section{
   text-align: center;
   margin-top: 5rem;
   gap: 2rem;
+
 }
 
 .contact-box .box {
 
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: 0.6s ease-in-out;
 
   padding: 1rem;
   border: 2px solid black;
   border-radius: 3rem;
-  transition: 0.4s ease-in-out;
 
   > i, span {
     color: var(--background-color);
@@ -340,11 +340,12 @@ section{
   transform: translateY(0);
 }
 
-.contact-box .box:hover{
+.contact-box a:hover .box{
   transform: scale(1.03);
-  background-color: var(--background-color);
+  background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
   cursor: pointer;
   border-radius: 1rem;
+  border: white;
 
   > i, span {
     color: var(--text-color);
@@ -353,11 +354,6 @@ section{
   .copy-tooltip {
     display: block;
   }
-}
-
-.contact-box .box a {
-
-  color: var(--background-color);
 }
 
 .contact-box .box .copy-tooltip {
