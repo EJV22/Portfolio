@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
 function Contact(){
@@ -15,6 +15,29 @@ function Contact(){
             setCopied(false);
         }, 2000);
     };
+
+    useEffect(() => {
+        
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }else{
+                    entry.target.classList.remove("show");
+                }
+            });
+        });
+
+        const contactElements = document.querySelectorAll(".box");
+
+        contactElements.forEach ((el) => observer.observe(el));
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     return(
         <section className="contact" id="contact">

@@ -321,6 +321,10 @@ section{
 
 .contact-box .box {
 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
   padding: 1rem;
   border: 2px solid black;
   border-radius: 3rem;
@@ -329,6 +333,11 @@ section{
   > i, span {
     color: var(--background-color);
   }
+}
+
+.contact-box .box.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-box .box:hover{
