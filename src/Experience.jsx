@@ -14,7 +14,7 @@ function Experience(){
                     <div className="grid-card">
 
                         <div className="icons">
-                            <i class="fa-brands fa-html5"/> <i class="fa-brands fa-css3-alt"/>
+                            <i className="fa-brands fa-html5"/> <i className="fa-brands fa-css3-alt"/>
                         </div>
 
                         <span>Frontend Development</span>
@@ -23,7 +23,7 @@ function Experience(){
                     </div>
 
                     <div className="grid-card">
-                        <i class="fa-solid fa-file-code"></i>
+                        <i className="fa-solid fa-users-viewfinder"></i>
 
                         <span>Community Involvement</span>
                         <h3>3+ years</h3>
@@ -31,7 +31,7 @@ function Experience(){
                     </div>
 
                     <div className="grid-card">
-                        <i class="fa-solid fa-laptop"></i>
+                        <i className="fa-solid fa-gift"></i>
 
                         <span>Service</span>
                         <h3>3+ years</h3>
@@ -39,7 +39,7 @@ function Experience(){
                     </div>
 
                     <div className="grid-card">
-                        <i class="fa-solid fa-list"></i>
+                        <i className="fa-solid fa-list"></i>
 
                         <span>Fundamentals</span>
                         <h3>1+ years</h3>

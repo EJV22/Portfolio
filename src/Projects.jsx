@@ -1,6 +1,30 @@
-import Headshot1 from "./assets/Headshot1.jpeg"
+import React, { useEffect, useState } from "react"
 
 function Project(){
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver ((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else{
+                    entry.target.classList.remove("show");
+                }
+            });
+        }, {
+            threshold: 0.7,
+        });
+
+        const cards = document.querySelectorAll(".project-card");
+
+        cards.forEach((card) =>{
+
+            observer.observe(card);
+        });
+    }, []);
 
     return(
 

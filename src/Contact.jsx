@@ -28,7 +28,7 @@ function Contact(){
 
             });
         }, {
-            threshold: 0.4
+            threshold: 0.4,
         });
 
         const boxes = document.querySelectorAll(".box");
@@ -48,7 +48,7 @@ function Contact(){
                 <a href="mailto:viteeiron@gmail.com">
                     <div className="box">
 
-                        <i class="fa-solid fa-envelope"/>
+                        <i className="fa-solid fa-envelope"/>
                         <span>viteeiron@gmail.com </span>
                         <span className="copy-tooltip">Click to email</span>
             
@@ -57,7 +57,7 @@ function Contact(){
 
                 <a href="mailto:eiron.j.vite@torontomu.ca">
                     <div className="box">
-                        <i class="fa-solid fa-book"/>
+                        <i className="fa-solid fa-book"/>
                         <span>eiron.j.vite@torontomu.ca</span>
                         <span className="copy-tooltip">Click to email</span>
                     </div>
@@ -66,7 +66,7 @@ function Contact(){
 
                 <a onClick={copyNumber}>
                     <div className="box">
-                        <i class="fa-solid fa-phone"/>
+                        <i className="fa-solid fa-phone"/>
                         <span>+1(437)-985-7856</span>
                         <span className="copy-tooltip"> {copied ? 'Successfully copied!' : 'Click to copy'}</span>
 

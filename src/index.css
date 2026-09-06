@@ -20,6 +20,10 @@
   list-style: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /*______________________HEADER___________________*/
 
 header {
@@ -70,7 +74,7 @@ li a{
     height: 5px;
     top: 25px;
     border-radius: 1rem;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
     background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
   }
 }
@@ -87,7 +91,7 @@ li a:hover::before {
   font-size: 1rem;
   cursor: pointer;
   text-wrap: nowrap;
-  transition: 0.3 ease-in-out;
+  transition: 0.3s ease-in-out;
   color: var(--header-background);
   background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
 }
@@ -272,6 +276,9 @@ section{
   gap: 2rem;
 }
 .project-card{
+
+  opacity: 0;
+  transform: scale(0);
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -282,12 +289,21 @@ section{
   border: 2px solid black;
   border-radius: 3rem;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.6s ease-in-out;
+
 }
+
+.project-card.show{
+
+  opacity: 1;
+  transform: scale(1);
+}
+
 .project-card:hover{
   background-color: var(--background-color);
   color: var(--text-color);
   transform: scale(1.02);
+  transition: 0.3s ease-in-out
 }
 .project-card img{
   width: 20vw;
@@ -324,28 +340,28 @@ section{
 
   opacity: 0;
   transform: translateY(50px);
-  transition: 0.6s ease-in-out;
-
+  transition: 0.8s ease-in-out;
   padding: 1rem;
   border: 2px solid black;
   border-radius: 3rem;
 
-  > i, span {
+}
+.contact-box .box i, .contact-box .box span {
     color: var(--background-color);
   }
-}
 
 .contact-box .box.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-.contact-box a:hover .box{
+.contact-box a:hover .box {
   transform: scale(1.03);
-  background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
+  background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)
+  );
   cursor: pointer;
   border-radius: 1rem;
-  border: white;
+  border: 2px solid white;
 
   > i, span {
     color: var(--text-color);
@@ -356,7 +372,7 @@ section{
   }
 }
 
-.contact-box .box .copy-tooltip {
+.copy-tooltip {
   display: none;
 }
 
