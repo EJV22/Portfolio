@@ -83,7 +83,7 @@ li a:hover::before {
   width: 100%;
 }
 
-.visit-btn{
+.resume-btn{
   padding: 0.8rem 1.5rem;
   border-radius: 3rem;
   border: none;
@@ -92,11 +92,11 @@ li a:hover::before {
   cursor: pointer;
   text-wrap: nowrap;
   transition: 0.3s ease-in-out;
-  color: var(--header-background);
+  color: var(--text-color);
   background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2));
 }
 
-.visit-btn:hover{
+.resume-btn:hover{
   background: linear-gradient(to right, var(--gradient-color2), var(--gradient-color1));
   transform: scale(1.03);
 }
@@ -128,11 +128,13 @@ section{
   gap: 10rem;
 }
 
-.about img{
+.about-img{
   width: 35vw;
   height: auto;
   border-radius: 3rem;
+  object-fit: contain
 }
+
 
 .info-box{
   display: flex;
@@ -289,7 +291,7 @@ section{
   border: 2px solid black;
   border-radius: 3rem;
   cursor: pointer;
-  transition: 0.6s ease-in-out;
+  transition: 0.5s ease-in-out;
 
 }
 
@@ -303,8 +305,9 @@ section{
   background-color: var(--background-color);
   color: var(--text-color);
   transform: scale(1.02);
-  transition: 0.3s ease-in-out
+  transition: 0.3s ease-in-out;
 }
+
 .project-card img{
   width: 20vw;
   border-radius: 1rem;

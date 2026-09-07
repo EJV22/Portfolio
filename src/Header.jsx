@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import EironViteResume from "./assets/EironVite.Resume.pdf"
 
 
 function Header(){
@@ -36,9 +37,9 @@ function Header(){
                 
             <i className="fa-solid fa-bars" id="menu-icon" onClick={toggleClick}></i>
 
-            <a href="https://github.com/EJV22" target="_blank" rel="noopener noreferrer">
-                <button className="visit-btn" >
-                    Visit Github
+            <a href={EironViteResume} download>
+                <button className="resume-btn" >
+                    Downlaod Resume
                 </button>
             </a>
         </header>

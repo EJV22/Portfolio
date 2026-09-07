@@ -10,12 +10,13 @@ function Project(){
 
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
-                } else{
+                } else {
                     entry.target.classList.remove("show");
                 }
             });
         }, {
-            threshold: 0.7,
+            threshold: 0.4,
+            rootMargin: "0px 0px -50px 0px"
         });
 
         const cards = document.querySelectorAll(".project-card");

@@ -1,5 +1,4 @@
 import Headshot1 from "./assets/Headshot1.jpeg"
-import EironViteResume from "./assets/EironVite.Resume.pdf"
 
 function About(){
 
@@ -7,7 +6,7 @@ function About(){
 
         <section id="about" className="about">
             <div className="about-container">
-                <img src={Headshot1} alt=""/>
+                <img src={Headshot1} alt="" className="about-img"/>
 
                     <div className="info-box">
                         <div className ="text">
@@ -17,7 +16,6 @@ function About(){
                         </div>
 
                         <div className="btn-group">
-                            <a href={EironViteResume} download className="btn">Download Resume</a>
                             
                             <a href="#contact" className="btn">Contact</a>
                         </div>
