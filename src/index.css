@@ -343,7 +343,7 @@ section{
 
   opacity: 0;
   transform: translateY(50px);
-  transition: 0.8s ease-in-out;
+  transition: 0.4s ease-in-out;
   padding: 1rem;
   border: 2px solid black;
   border-radius: 3rem;
@@ -360,8 +360,7 @@ section{
 
 .contact-box a:hover .box {
   transform: scale(1.03);
-  background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)
-  );
+  background: var(--background-color);
   cursor: pointer;
   border-radius: 1rem;
   border: 2px solid white;
@@ -458,7 +457,7 @@ footer ul li a{
   }
 }
 
-@media(max-width: 625px) {
+@media(max-width: 650px) {
   header #menu-icon{
     display: block;
     cursor: pointer;

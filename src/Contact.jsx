@@ -50,7 +50,6 @@ function Contact(){
 
                         <i className="fa-solid fa-envelope"/>
                         <span>viteeiron@gmail.com </span>
-                        <span className="copy-tooltip">Click to email</span>
             
                     </div>
                 </a>
@@ -59,7 +58,6 @@ function Contact(){
                     <div className="box">
                         <i className="fa-solid fa-book"/>
                         <span>eiron.j.vite@torontomu.ca</span>
-                        <span className="copy-tooltip">Click to email</span>
                     </div>
                 </a>
 
