@@ -13,13 +13,16 @@ function Header(){
 
     return(
         <header className="header">
+
+            <i className="fa-solid fa-bars" id="menu-icon" onClick={toggleClick}></i>
+
             <a href="#" className="logo">
                 <span>Eiron Vite</span>
             </a>
 
             <ul className={`nav-links ${isClicked ? 'active' : ''}`}>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" id="about-icon">About</a>
                 </li>
 
                 <li>
@@ -34,8 +37,6 @@ function Header(){
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
-                
-            <i className="fa-solid fa-bars" id="menu-icon" onClick={toggleClick}></i>
 
             <a href={EironViteResume} download>
                 <button className="resume-btn" >
