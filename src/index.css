@@ -139,8 +139,8 @@ section{
 .about .img-container{
 
   position: relative;
-  width: max(4rem, 35vw);
-  height: max(4rem, 35vw);
+  width: max(25rem, 35vw);
+  height: max(25rem, 35vw);
 
 }
 
