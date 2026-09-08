@@ -113,7 +113,7 @@ section{
   position: relative;
 }
 
-/*______________________INTRODUCTION___________________*/
+/*______________________ABOUT___________________*/
 
 .about{
   display: flex;
@@ -128,11 +128,35 @@ section{
   gap: 10rem;
 }
 
-.about-img{
-  width: 35vw;
-  height: auto;
-  border-radius: 3rem;
-  object-fit: contain
+.about .img-container img{
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.about .img-container{
+
+  position: relative;
+  width: max(4rem, 35vw);
+  height: max(4rem, 35vw);
+
+}
+
+.about .img-container::before{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(var(--gradient-color1), var(--gradient-color2));
+  filter: blur(10px);
+
+  z-index: -1;
 }
 
 
@@ -215,7 +239,7 @@ section{
 
 .section-title{
   text-align: center;
-  font-size: clamp(3.5rem, 4rem, 20vh);
+  font-size: 4rem;
   font-weight: 600;
   margin-bottom: 3rem;
 }
@@ -521,8 +545,9 @@ footer ul li a{
     color: var(--text-color);
   }
 
-  .about-container img{
+  .about-container .img-container{
     width: 60vw;
+    height: 60vw;
   }
   .input-box input{
     padding: 0.5rem 3rem;
@@ -546,5 +571,10 @@ footer ul li a{
   header .logo {
     margin-left: auto;
     margin-right: 0;
+  }
+
+  .section-title {
+
+    font-size: 3rem;
   }
 }
