@@ -3,20 +3,12 @@ function Footer(){
 
     return(
 
-        <footer>
+        <div className="footer">
 
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-            </ul>
-        </footer>
+            <h2>© 2026 Eiron Vite. All rights reserved.</h2>
+
+            <h2>viteeiron@gmail.com</h2>
+        </div>
     );
 }
 

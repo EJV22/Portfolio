@@ -1,79 +1,108 @@
-import React, {useEffect, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 
-function Contact(){
+function Contact({ open, onClose }) {
+  const dialogRef = useRef(null);
+  const formRef = useRef(null);
+  const [status, setStatus] = useState("idle");
 
-    const [copied, setCopied] = useState(false);
-
-    const copyNumber = async () => {
-
-        await navigator.clipboard.writeText("437-985-7856");
-        setCopied (true);
-
-        setTimeout(() => {
-
-            setCopied(false);
-        }, 2000);
-    };
-
-    useEffect(() => {
-
-        const observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                } else{
-                    entry.target.classList.remove("show");
-                }
-
-            });
-        }, {
-            threshold: 0.4,
-        });
-
-        const boxes = document.querySelectorAll(".box");
-
-        boxes.forEach((box) => {
-            observer.observe(box);
-        });
-    }, []);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (open && !dialog.open) dialog.showModal();
+    if (!open && dialog.open) dialog.close();
+  }, [open]);
 
 
-    return(
-        <section className="contact" id="contact">
-            <div className="contact-box">
+  function handleClose() {
+    setStatus("idle");
+    formRef.current?.reset();
+    onClose();
+  }
 
-                <h2 className="section-title">Contact Me</h2>
+  function handleBackdropClick(e) {
+    if (e.target === dialogRef.current) dialogRef.current.close();
+  }
 
-                <a href="mailto:viteeiron@gmail.com">
-                    <div className="box">
+  function handleSubmit(e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.currentTarget));
 
-                        <i className="fa-solid fa-envelope"/>
-                        <span>viteeiron@gmail.com </span>
-            
-                    </div>
-                </a>
+    console.log(data);
 
-                <a href="mailto:eiron.j.vite@torontomu.ca">
-                    <div className="box">
-                        <i className="fa-solid fa-book"/>
-                        <span>eiron.j.vite@torontomu.ca</span>
-                    </div>
-                </a>
+    setStatus("sent");
+  }
 
+  return (
+    <dialog
+      ref={dialogRef}
+      className="contact"
+      aria-labelledby="contact-title"
+      onClose={handleClose}
+      onClick={handleBackdropClick}
+    >
+      <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
+        <p className="contact-kicker">Contact</p>
+        <h2 id="contact-title" className="contact-title">
+          Let’s collaborate!
+        </h2>
 
-                <a onClick={copyNumber}>
-                    <div className="box">
-                        <i className="fa-solid fa-phone"/>
-                        <span>+1(437)-985-7856</span>
-                        <span className="copy-tooltip"> {copied ? 'Successfully copied!' : 'Click to copy'}</span>
+        <div className="contact-field">
+          <label htmlFor="contact-name">Name:</label>
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            placeholder="Enter your name..."
+            required
+          />
+        </div>
 
-                    </div>  
-                </a>
+        <div className="contact-field">
+          <label htmlFor="contact-email">Email:</label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            placeholder="Enter your email..."
+            required
+          />
+        </div>
 
-            </div>
-        </section>
-    );
+        <div className="contact-field">
+          <label htmlFor="contact-message">Your message:</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows={3}
+            placeholder="I am open to collabs, internships, and anything that allows me to make a difference :]"
+            required
+          />
+        </div>
+
+        <button type="submit" className="contact-submit">
+          Submit
+        </button>
+
+        {status === "sent" && (
+          <p className="contact-status" role="status">
+            Thanks, I’ll get back to you soon.
+          </p>
+        )}
+
+        {/* Last in the DOM so the first field gets focus when the dialog opens */}
+        <button
+          type="button"
+          className="contact-close"
+          aria-label="Close contact form"
+          onClick={() => dialogRef.current?.close()}
+        >
+          ×
+        </button>
+      </form>
+    </dialog>
+  );
 }
 
 export default Contact;

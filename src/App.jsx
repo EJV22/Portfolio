@@ -1,22 +1,33 @@
-import Header from "./Header.jsx"
-import About from "./About.jsx"
-import Experience from "./Experience.jsx"
-import Projects from "./Projects.jsx"
-import Contact from "./Contact.jsx"
-import Footer from "./Footer.jsx"
+import { useState } from "react";
+import './index.css'
+import Header from "./Header";
+import Hero from "./Hero";
+import About from "./About";
+import Projects from './Projects';
+import Footer from "./Footer";
+import Contact from "./Contact";
+
 
 function App() {
-  
+
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <>
-      <Header/>
+
+      <Header onContact={() => setContactOpen(true)} />
+
+      <Hero onContact={() => setContactOpen(true)} />
+
       <About/>
-      <Experience/>
+
       <Projects/>
-      <Contact/>
+
       <Footer/>
+
+      <Contact open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

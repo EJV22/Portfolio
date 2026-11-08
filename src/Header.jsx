@@ -1,48 +1,40 @@
-import React, {useState} from 'react';
-import EironViteResume from "./assets/EironVite.Resume.pdf"
+import { useState, useEffect } from "react";
 
+import LightMode from "./assets/LightMode.svg";
+import DarkMode from "./assets/DarkMode.svg";
 
-function Header(){
+function useLightMode() {
+    const [isLight, setIsLight] = useState(false);
 
-    const [isClicked, setIsClicked] = useState(false);
+    useEffect(() => {
+        document.body.classList.toggle("light", isLight);
+    }, [isLight]);
 
-    const toggleClick = () => {
+    return [isLight, setIsLight];
+}
 
-        setIsClicked(!isClicked);
-    }
+function Header({ onContact }) {
+
+    const [isLight, setIsLight] = useLightMode();
 
     return(
-        <header className="header">
 
-            <i className="fa-solid fa-bars" id="menu-icon" onClick={toggleClick}></i>
+        <header>
 
-            <a href="#" className="logo">
-                <span>Eiron Vite</span>
-            </a>
+            <div className="header-box">
+                <h1>EJ</h1>
 
-            <ul className={`nav-links ${isClicked ? 'active' : ''}`}>
-                <li>
-                    <a href="#about" id="about-icon">About</a>
-                </li>
+                <div className="nav-box">
 
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
                     <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-
-            <a href={EironViteResume} download>
-                <button className="resume-btn" >
-                    Downlaod Resume
-                </button>
-            </a>
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); onContact(); }}>Contact</a>
+                    <button onClick={() => setIsLight(prev => !prev)}>
+                        <img src={isLight ? DarkMode : LightMode} alt="Light Mode or Dark Mode" />
+                    </button>
+                </div>
+            </div>
         </header>
     );
 }
