@@ -135,7 +135,7 @@ header {
 
   flex: 1 1 auto;
 
-  background: color-mix(var(--bg-dark) 90%, transparent);
+  background: color-mix(in srgb, var(--bg-dark) 90%, transparent);
   backdrop-filter: blur(8px);
 
   padding: 1rem 0;
@@ -273,11 +273,13 @@ header {
 .intro {
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  flex: 1 1 auto;
+  gap: 0.5rem;
 
-  flex-wrap: wrap;
+  flex: 1 1 auto;
+  min-width: 0;
 
   color: var(--text);
 
@@ -291,8 +293,6 @@ header {
     &:last-child {
       font-size: 4rem;
     }
-
-    width: 100%;
   }
 
   h3 {
@@ -301,7 +301,6 @@ header {
     margin: 0;
 
     color: var(--text-muted);
-    width: 100%;
   }
 }
 
