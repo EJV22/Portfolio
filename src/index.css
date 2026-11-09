@@ -291,6 +291,8 @@ header {
     &:last-child {
       font-size: 4rem;
     }
+
+    width: 100%;
   }
 
   h3 {
@@ -299,6 +301,7 @@ header {
     margin: 0;
 
     color: var(--text-muted);
+    width: 100%;
   }
 }
 
