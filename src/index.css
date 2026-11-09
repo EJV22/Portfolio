@@ -1031,3 +1031,288 @@ header,
     opacity: 0;
   }
 }
+
+/*--RESPONSIVE: SMALL DESKTOP / LARGE TABLET--*/
+@media (max-width: 1024px) {
+
+  .nav-box a {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro h2:last-child {
+    font-size: 3.25rem;
+  }
+
+  .intro h3 {
+    font-size: 1.25rem;
+  }
+
+  .hero {
+    margin-bottom: 10rem;
+  }
+
+  .about {
+    gap: 1.5rem;
+  }
+
+  .school-list {
+    flex-wrap: wrap;
+  }
+
+  .jobs-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/*--RESPONSIVE: TABLET--*/
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 1.5rem;
+  }
+
+  header,
+  .footer {
+    margin-inline: -1.5rem;
+    padding-inline: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .header-box {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .header-box > a {
+    font-size: 1.5rem;
+  }
+
+  .nav-box {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .nav-box a {
+    font-size: 1rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .hero {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .hero-box {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    height: auto;
+    overflow: visible;
+  }
+
+  .intro {
+    flex: 0 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    width: 100%;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro h2:last-child {
+    font-size: 2.75rem;
+  }
+
+  .intro h3 {
+    font-size: 1.1rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .social-links a {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-img {
+    flex: 0 0 auto;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-img > img {
+    width: 60%;
+    max-width: 18rem;
+    height: auto;
+  }
+
+  .about,
+  .projects {
+    scroll-margin-top: 9rem;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-bottom: 5rem;
+  }
+
+  .about-header :nth-child(2),
+  .project-header :nth-child(2) {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.15rem;
+  }
+
+  .school-box,
+  .jobs-box,
+  .project-box {
+    padding: 1.25rem;
+  }
+
+  .school-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .job-details {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .project-box {
+    grid-template-columns: 1fr;
+  }
+
+  .project-article,
+  .project-desc,
+  .project-img {
+    height: auto;
+  }
+
+  .project-img > img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.75rem;
+
+    text-align: center;
+  }
+}
+
+/*--RESPONSIVE: PHONE--*/
+@media (max-width: 480px) {
+
+  body {
+    padding: 0 1rem;
+  }
+
+  header,
+  .footer {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .header-box > a {
+    font-size: 1.25rem;
+  }
+
+  .nav-box a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .hero {
+    margin-bottom: 4rem;
+    padding: 0.75rem;
+  }
+
+  .hero-box {
+    gap: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro h2:last-child {
+    font-size: 2.25rem;
+  }
+
+  .intro h3 {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+
+  .hero-img > img {
+    width: 70%;
+  }
+
+  .about,
+  .projects {
+    gap: 1.25rem;
+  }
+
+  .school-box,
+  .jobs-box,
+  .project-box {
+    padding: 1rem;
+  }
+
+  .school-box > h3,
+  .jobs-box > h3 {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .project-article > h3 {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+  }
+
+  .job {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-title {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+  }
+}
